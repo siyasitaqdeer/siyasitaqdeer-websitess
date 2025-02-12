@@ -1,0 +1,334 @@
+/* General Styles */
+body {
+    font-family: 'Nastaliq', 'Noto Nastaliq Urdu', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    direction: rtl;
+    overflow-x: hidden;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, white, white);
+    color: white#fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: slideDown 1s ease-in-out forwards;
+    position: relative;
+    z-index: 1000;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.whatsapp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px; /* تھوڑا نیچے لے جانے کے لیے */
+}
+
+.whatsapp-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #25D366;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* بٹن کے درمیان جگہ */
+    flex-wrap: wrap; /* موبائل پر بٹن نیچے آجائیں گے */
+    margin-top: 10px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.whatsapp:hover {
+    background-color: #1eb85d;
+    transform: scale(1.08);
+}
+
+.facebook {
+    background-color: #1877F2;
+}
+
+.facebook:hover {
+    background-color: #165BBD;
+    transform: scale(1.08);
+}
+
+.social-icon {
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 600px) {
+    .social-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.call {
+    background-color: #015ea1;
+}
+
+.call:hover {
+    background-color: #e64a19;
+    transform: scale(1.08);
+}
+.detail {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: white;
+    color: #015a86;
+    padding: 0px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 10px;
+    padding: 0;
+    font-size: 1.2rem; /* Reduced font size for mobile */
+    font-weight: bold;
+    background-color: white;
+    color: #015ea1;
+    padding: 0px 15px;
+    border: 2px solid #015ea1;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Top Bar (News Ticker) */
+.top-bar {
+    background-color: #34495e;
+    padding: 8px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1c40f;
+    flex-wrap: wrap;
+}
+
+.top-bar span {
+    margin: 0 0px;
+    padding-bottom: 10px;
+    padding: 0px;
+}
+/* Navigation */
+nav {
+    background: #025077;
+    padding: 0;
+    position: relative;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Reduced gap for mobile */
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.7s forwards;
+}
+
+nav {
+    background: #2c3e50;
+    padding: 10px 0;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* موبائل پر لائن بریک کے لیے */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    display: block; /* آسان کلک ایریا کے لیے */
+}
+
+nav ul li a:hover {
+    color: #f1c40f;
+    transform: scale(1.1);
+}
+
+/* موبائل کے لیے نیویگیشن اسٹائل */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}
+
+/* Profile Section */
+.profile-section {
+    text-align: center;
+    padding: 90px 80px; /* Adjusted padding for mobile */
+    background: linear-gradient(135deg, #015a86, #015a86);
+    background: url('press\ card.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2);
+    max-width: 100%; /* Full width for mobile */
+    margin: 20px auto; /* Adjusted margin for mobile */
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    transition: all 1s ease-in-out;
+    background-size: cover; /* Adjusted background size for mobile */
+}
+
+/* Profile Card */
+.profile-card {
+    background: white;
+    padding: 10px; /* Reduced padding for mobile */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Image */
+.profile-card .profile-image {
+    width: 100px; /* Reduced size for mobile */
+    height: 100px; /* Reduced size for mobile */
+    border-radius: 50%;
+    border: 3px solid #015a86; /* Reduced border size for mobile */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 8px; /* Reduced margin for mobile */
+}
+
+.profile-card .profile-image:hover {
+    transform: scale(1.1);
+}
+
+/* Profile Name */
+.profile-card h3 {
+    margin-top: 8px;
+    font-size: 1.5rem; /* Reduced font size for mobile */
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Profile Details */
+.profile-card p {
+    font-size: 1rem; /* Reduced font size for mobile */
+    margin: 6px 0;
+    color: #555;
+    font-weight: 500;
+}
+
+.profile-card p strong {
+    color: #2c3e50;
+}
+
+/* Certificate Button */
+.certificate-block {
+    margin-top: 10px; /* Reduced margin for mobile */
+}
+
+.certificate-button {
+    display: inline-block;
+    padding: 8px 16px; /* Reduced padding for mobile */
+    font-size: 0.9rem; /* Reduced font size for mobile */
+    font-weight: bold;
+    background: #f1c40f;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.certificate-button:hover {
+    background: #2c3e50;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0; /* Reduced padding for mobile */
+    margin-top: 15px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.5s forwards;
+}

@@ -1,0 +1,527 @@
+/* General Styles */
+body {
+    font-family: 'Nastaliq', 'Noto Nastaliq Urdu', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    direction: rtl;
+    overflow-x: hidden;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Styles */
+/* General Header Styles */
+header {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: slideDown 1s ease-in-out forwards;
+}
+
+/* Slide Down Animation */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Top Bar (News Ticker) */
+.top-bar {
+    background-color: #34495e;
+    padding: 5px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1c40f;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
+    flex-wrap: wrap;
+}
+
+.top-bar span {
+    margin: 0 10px;
+}
+
+/* Marquee Animation */
+.top-bar marquee {
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav {
+    background: #2c3e50;
+    padding: 10px 0;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.7s forwards;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #f1c40f;
+    transform: scale(1.1);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    background-color: #fff;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        width: 100%;
+        background: #2c3e50;
+        padding: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    /* Adjust the top-bar for mobile */
+    .top-bar {
+        font-size: 0.9rem;
+        justify-content: space-between;
+        padding: 10px;
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Main Section */
+.section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1s forwards;
+    transform: translateY(10px);
+}
+
+/* Section Header */
+.section h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #f1c40f;
+    padding-bottom: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* News Grid */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* News Block */
+.news-block {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.2s forwards;
+}
+
+/* Hover Effect */
+.news-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* News Image */
+.news-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Zoom Effect */
+.news-block img:hover {
+    transform: scale(1.05);
+}
+
+/* News Text */
+.news-block p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Verification Form */
+/* Verification Section */
+.verification-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Verification Form */
+#verificationForm {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: perspective(1000px) rotateX(0deg);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 3D Hover Effect */
+#verificationForm:hover {
+    transform: perspective(1000px) rotateX(5deg);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Labels */
+#verificationForm label {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Input Field */
+#verificationForm input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: 2px solid #f1c40f;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Focus Effect */
+#verificationForm input:focus {
+    border-color: #2c3e50;
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.5);
+    transform: scale(1.05);
+}
+
+/* Submit Button */
+#verificationForm button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.3rem;
+    background: #f1c40f;
+    color: #2c3e50;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#verificationForm button:hover {
+    background: #2c3e50;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .verification-section {
+        padding: 30px;
+    }
+
+    #verificationForm {
+        padding: 20px;
+    }
+
+    #verificationForm label {
+        font-size: 1.2rem;
+    }
+
+    #verificationForm input {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    #verificationForm button {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.5s forwards;
+}
+
+/* Loader Animation */
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.loader img {
+    width: 80px;
+    animation: spin 1s linear infinite;
+}
+
+/* Spin Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hide Loader After Page Load */
+body.loaded .loader {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Profile Section */
+.profile-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Profile Card */
+.profile-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: perspective(1000px) rotateX(0deg);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 3D Hover Effect */
+.profile-card:hover {
+    transform: perspective(1000px) rotateX(5deg);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Image */
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #f1c40f;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Zoom Effect */
+.profile-card img:hover {
+    transform: scale(1.1);
+}
+
+/* Profile Details */
+.profile-card h3 {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.profile-card p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #555;
+}
+
+.profile-card p strong {
+    color: #2c3e50;
+}
+
+/* Certificate Button */
+.certificate-block {
+    margin-top: 20px;
+}
+
+.certificate-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background: #f1c40f;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.certificate-button:hover {
+    background: #2c3e50;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-section {
+        padding: 30px;
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .profile-card p {
+        font-size: 1rem;
+    }
+
+    .certificate-button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
